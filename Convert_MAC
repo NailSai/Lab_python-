@@ -1,0 +1,24 @@
+mac = ["aabb:cc80:7000", "aabb:dd80:7340", "aabb:ee80:7000", "aabb:ff80:7000"]
+MAC =[]
+for Add in mac:
+    A = Add.replace(":",".")
+    MAC.append(A)
+
+print(MAC)
+############################################
+result.append(m.replace(":", "."))
+
+IP_add = input("please input IP add : ")
+
+IP = int(IP_add.split(".")[0])
+
+if IP_add == "255.255.255.255":
+    print("local broadcast")
+elif IP_add == "0.0.0.0":
+    print("unassigned")
+elif 1 <= IP <= 223:
+    print("unicast")
+elif 224 <= IP <= 239:
+    print("multicast")
+else:
+    print("unused")
